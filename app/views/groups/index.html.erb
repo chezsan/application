@@ -1,0 +1,11 @@
+<div class="row">
+  <% @groups.each do |group| %>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <a href="/groups/<%= group.id %>">
+          <img src="/assets/<%= group.image %>">
+        </a>
+      </div>
+    </div>
+  <% end %>
+</div>

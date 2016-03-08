@@ -1,0 +1,12 @@
+<h3 class="page-header">
+  All Internalusers
+  <span class="pull-right">
+    <%= link_to "New Internaluser", new_internaluser_path, class: 'btn btn-sm btn-success' %>
+  </span>
+</h3>
+
+<ul>
+  <% @internalusers.each do |internaluser| %>
+    <li><%= internaluser.name %> <%= link_to "Edit", edit_internaluser_path(internaluser) %> <%= link_to "Delete", internaluser_path(internaluser), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+  <% end %>
+</ul>
